@@ -3,73 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idiotas Oficiais - Jogos</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 40px;
-      margin: 0;
-      animation: fadeIn 0.5s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    h1 {
-      color: #00ffcc;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-    nav {
-      background-color: #1e1e1e;
-      padding: 15px;
-      border-bottom: 2px solid #00ffcc;
-      margin-bottom: 30px;
-    }
-    nav a {
-      color: #00ffcc;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ff00ff;
-    }
-    .link-box {
-      background-color: #1e1e1e;
-      border: 1px solid #00ffcc;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 15px auto;
-      width: 90%;
-      max-width: 500px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .link-box:hover {
-      transform: scale(1.05);
-      background-color: #2a2a2a;
-      box-shadow: 0 0 10px #00ffcc;
-    }
-    a {
-      color: #00ffcc;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    small {
-      color: #aaa;
-    }
-    footer {
-      margin-top: 40px;
-      color: #aaa;
-    }
-  </style>
+  <title>Idiotas Oficiais - Jogos Radicais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-blue-900 text-white font-sans min-h-screen flex flex-col">
+  <!-- Navegação -->
+  <nav class="bg-blue-700 p-4 sticky top-0 shadow-lg z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-yellow-300">Arcade dos Idiotas Oficiais 😎</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-yellow-300 hover:text-pink-400 transition-colors">Home</a></li>
+        <li><a href="games.html" class="text-yellow-300 hover:text-pink-400 transition-colors">Jogos</a></li>
+        <li><a href="about.html" class="text-yellow-300 hover:text-pink-400 transition-colors">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Seção Principal -->
+  <section class="container mx-auto py-12 flex-grow">
+    <h1 class="text-5xl font-extrabold text-center text-yellow-300 mb-6 animate-pulse">Jogos Radicais! 🎮</h1>
+    <p class="text-xl text-center text-gray-300 mb-8">Escolha seu jogo e divirta-se, mas só depois da aula, hein? 🚀</p>
+
+    <!-- Links de Jogos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://emupedia.net/beta/emuos/')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🌐 EmuOS (Emupedia)</a>
+        <p class="text-gray-400 mt-2">Sistema operacional retrô com jogos clássicos</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('http://www.windows93.net/')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">💻 Windows 93</a>
+        <p class="text-gray-400 mt-2">Interface maluca estilo OS com apps e jogos escondidos</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://archive.org/details/softwarelibrary')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🗂 Internet Archive - Jogos</a>
+        <p class="text-gray-400 mt-2">Milhares de jogos antigos direto do navegador</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://slope-game.github.io/')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🎮 Slope Game</a>
+        <p class="text-gray-400 mt-2">Desvie de obstáculos em alta velocidade!</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://3kh0s.github.io/games/')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🎮 Slope Game 2.0</a>
+        <p class="text-gray-400 mt-2">Mais desafios e zoeira em alta velocidade!</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://nb-ga.github.io/games-site/')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🎮 Algame Games</a>
+        <p class="text-gray-400 mt-2">Jogos irados pra curtir na escola!</p>
+      </div>
+      <div class="bg-blue-800 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+        <a href="#" onclick="confirmNavigation('https://1kh0.github.io/projects')" class="text-2xl font-bold text-yellow-300 hover:text-pink-400">🎮 Site de Gaimes by Ryan</a>
+        <p class="text-gray-400 mt-2">Jogos zoeiros e irados pra galera!</p>
+      </div>
+    </div>
+
+    <!-- Jogo Embutido -->
+    <div class="mt-12">
+      <h2 class="text-3xl font-bold text-center text-yellow-300 mb-6">Jogo Bônus: Snake 🐍</h2>
+      <p class="text-gray-300 mb-6">Jogue este clássico direto no site, jovem padawan!</p>
+      <iframe src="https://www.google.com/fbx?fbx=snake_arcade" width="600" height="400" class="mx-auto rounded-lg shadow-lg" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-blue-700 p-4 text-center">
+    <p class="text-gray-300"><small>Site criado unicamente pelo Pedro Ryan Batista de Andrade &copy; 2025</small></p>
+  </footer>
+
   <script>
     function confirmNavigation(url) {
       if (confirm("Tem certeza que quer acessar este site? 😎")) {
@@ -77,49 +76,5 @@
       }
     }
   </script>
-</head>
-<body>
-  <!-- Navegação -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="games.html">Jogos</a>
-    <a href="about.html">Sobre</a>
-  </nav>
-  <!-- Título e Descrição -->
-  <h1>Jogos Radicais</h1>
-  <p>Escolha seu jogo e divirta-se! (Mas só depois da aula, hein?)</p>
-  <!-- Links de Jogos -->
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://emupedia.net/beta/emuos/')">🌐 EmuOS (Emupedia)</a><br>
-    <small>Sistema operacional retrô com jogos clássicos</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('http://www.windows93.net/')">💻 Windows 93</a><br>
-    <small>Interface maluca estilo OS com apps e jogos escondidos</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://archive.org/details/softwarelibrary')">🗂 Internet Archive - Jogos</a><br>
-    <small>Milhares de jogos antigos direto do navegador</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://slope-game.github.io/')">🎮 Slope Game</a><br>
-    <small>Desvie de obstáculos em alta velocidade!</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://3kh0s.github.io/games/')">🎮 Slope Game 2.0</a><br>
-    <small>Foda</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://nb-ga.github.io/games-site/')">Algame comes</a><br>
-    <small>Foda 2.0</small>
-  </div>
-  <div class="link-box">
-    <a href="#" onclick="confirmNavigation('https://1kh0.github.io/projects')">Site de gaimes by ryan</a><br>
-    <small>9 PAL PAL</small>
-  </div>
-  <!-- Rodapé -->
-  <footer>
-    <p><small>Site criado unicamente pelo Pedro Ryan Batista de Andrade</small></p>
-  </footer>
 </body>
 </html>
