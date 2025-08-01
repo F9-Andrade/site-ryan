@@ -3,85 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogos - Arcade dos Idiotas Oficiais</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Idiotas Oficiais - Jogos</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    h1 {
+      color: #00ffcc;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    nav {
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-bottom: 2px solid #00ffcc;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff00ff;
+    }
+    .link-box {
+      background-color: #1e1e1e;
+      border: 1px solid #00ffcc;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 500px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .link-box:hover {
+      transform: scale(1.05);
+      background-color: #2a2a2a;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+    a {
+      color: #00ffcc;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    small {
+      color: #aaa;
+    }
+    footer {
+      margin-top: 40px;
+      color: #aaa;
+    }
+  </style>
+  <script>
+    function confirmNavigation(url) {
+      if (confirm("Tem certeza que quer acessar este site? 😎")) {
+        window.open(url, "_blank");
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- Barra de Navegação -->
-  <nav class="bg-blue-600 p-4 sticky top-0 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Arcade dos Idiotas Oficiais 😎</h1>
-      <ul class="flex space-x-4">
-        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
-        <li><a href="jogos.html" class="hover:text-yellow-300">Jogos</a></li>
-        <li><a href="#" class="hover:text-yellow-300">Sobre</a></li>
-      </ul>
-    </div>
+<body>
+  <!-- Navegação -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Jogos</a>
+    <a href="about.html">Sobre</a>
   </nav>
-
-  <!-- Seção de Jogos -->
-  <section class="container mx-auto py-10 text-center">
-    <h2 class="text-4xl font-extrabold mb-4">Jogos Radicais! 🎮</h2>
-    <p class="text-lg mb-6">Os clássicos do Arcade que rolam na escola! 🚀</p>
-
-    <!-- Clássicos do Arcade (Links Antigos) -->
-    <h3 class="text-3xl font-bold mb-6">Clássicos do Arcade 😎</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- EmuOS -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🌐 EmuOS (Emupedia)</h4>
-        <p class="mb-4">Sistema operacional retrô com jogos clássicos</p>
-        <a href="https://emupedia.net/beta/emuos/" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Windows 93 -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">💻 Windows 93</h4>
-        <p class="mb-4">Interface maluca estilo OS com apps e jogos escondidos</p>
-        <a href="http://www.windows93.net/" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Internet Archive -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🗂 Internet Archive - Jogos</h4>
-        <p class="mb-4">Milhares de jogos antigos direto do navegador</p>
-        <a href="https://archive.org/details/softwarelibrary" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Slope Game -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🎮 Slope Game</h4>
-        <p class="mb-4">Desvie de obstáculos em alta velocidade!</p>
-        <a href="https://slope-game.github.io/" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Slope Game 2.0 -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🎮 Slope Game 2.0</h4>
-        <p class="mb-4">Mais desafios e zoeira em alta velocidade!</p>
-        <a href="https://3kh0s.github.io/games/" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Algame Games -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🎮 Algame Games</h4>
-        <p class="mb-4">Jogos irados pra curtir na escola!</p>
-        <a href="https://nb-ga.github.io/games-site/" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-      <!-- Site de Gaimes by Ryan -->
-      <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
-        <h4 class="text-2xl font-bold mb-2">🎮 Site de Gaimes by Ryan</h4>
-        <p class="mb-4">Jogos zoeiros e irados pra galera!</p>
-        <a href="https://1kh0.github.io/projects" target="_blank" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400">Jogar Agora!</a>
-      </div>
-    </div>
-
-    <!-- Jogo Embutido -->
-    <div class="mt-10">
-      <h3 class="text-3xl font-bold mb-4">Jogo Bônus: Snake 🐍</h3>
-      <p class="mb-4">Jogue este clássico direto no site!</p>
-      <iframe src="https://www.google.com/fbx?fbx=snake_arcade" width="600" height="400" class="mx-auto rounded-lg shadow-lg" frameborder="0"></iframe>
-    </div>
-  </section>
-
+  <!-- Título e Descrição -->
+  <h1>Jogos Radicais</h1>
+  <p>Escolha seu jogo e divirta-se! (Mas só depois da aula, hein?)</p>
+  <!-- Links de Jogos -->
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://emupedia.net/beta/emuos/')">🌐 EmuOS (Emupedia)</a><br>
+    <small>Sistema operacional retrô com jogos clássicos</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('http://www.windows93.net/')">💻 Windows 93</a><br>
+    <small>Interface maluca estilo OS com apps e jogos escondidos</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://archive.org/details/softwarelibrary')">🗂 Internet Archive - Jogos</a><br>
+    <small>Milhares de jogos antigos direto do navegador</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://slope-game.github.io/')">🎮 Slope Game</a><br>
+    <small>Desvie de obstáculos em alta velocidade!</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://3kh0s.github.io/games/')">🎮 Slope Game 2.0</a><br>
+    <small>Foda</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://nb-ga.github.io/games-site/')">Algame comes</a><br>
+    <small>Foda 2.0</small>
+  </div>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://1kh0.github.io/projects')">Site de gaimes by ryan</a><br>
+    <small>9 PAL PAL</small>
+  </div>
   <!-- Rodapé -->
-  <footer class="bg-blue-600 p-4 text-center">
-    <p>&copy; 2025 Arcade dos Idiotas Oficiais. Feito com zoeira e 😎</p>
+  <footer>
+    <p><small>Site criado unicamente pelo Pedro Ryan Batista de Andrade</small></p>
   </footer>
 </body>
 </html>
