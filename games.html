@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idiotas Oficiais - Home</title>
+  <title>Idiotas Oficiais - Jogos</title>
   <style>
     body {
       background-color: #121212;
@@ -76,33 +76,18 @@
       color: #aaa;
     }
 
-    .zoeira-box {
-      background-color: #1e1e1e;
-      border: 1px dashed #ff00ff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 30px auto;
-      width: 90%;
-      max-width: 600px;
-      animation: slideIn 0.5s ease-in;
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .zoeira-box img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-
     footer {
       margin-top: 40px;
       color: #aaa;
     }
   </style>
+  <script>
+    function confirmNavigation(url) {
+      if (confirm("Tem certeza que quer acessar este site? 😎")) {
+        window.open(url, "_blank");
+      }
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -111,16 +96,43 @@
     <a href="about.html">Sobre</a>
   </nav>
 
-  <h1>Arcade dos Idiotas Oficiais</h1>
-  <p>Sites que funcionam na escola 😎 radicais</p>
+  <h1>Jogos Radicais</h1>
+  <p>Escolha seu jogo e divirta-se! (Mas só depois da aula, hein?)</p>
 
-  <div class="zoeira-box">
-    <h2>🖼️ Imagem Zoeira do Dia</h2>
-    <p>Pra descontrair depois de ter uma aula radical 😎</p>
-    <img src="https://picsum.photos/500?random=1" alt="Imagem zoeira aleatória">
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://emupedia.net/beta/emuos/')">🌐 EmuOS (Emupedia)</a><br>
+    <small>Sistema operacional retrô com jogos clássicos</small>
   </div>
 
-  <p><small>Use com sabedoria e não durante a aula, jovem padawan 🧠✨</small></p>
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('http://www.windows93.net/')">💻 Windows 93</a><br>
+    <small>Interface maluca estilo OS com apps e jogos escondidos</small>
+  </div>
+
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://archive.org/details/softwarelibrary')">🗂 Internet Archive - Jogos</a><br>
+    <small>Milhares de jogos antigos direto do navegador</small>
+  </div>
+
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://slope-game.github.io/')">🎮 Slope Game</a><br>
+    <small>Desvie de obstáculos em alta velocidade!</small>
+  </div>
+
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://3kh0s.github.io/games/')">🎮 Slope Game 2.0</a><br>
+    <small>Foda</small>
+  </div>
+
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://nb-ga.github.io/games-site/')">Algame comes</a><br>
+    <small>Foda 2.0</small>
+  </div>
+
+  <div class="link-box">
+    <a href="#" onclick="confirmNavigation('https://1kh0.github.io/projects')">Site de gaimes by ryan</a><br>
+    <small>9 PAL PAL</small>
+  </div>
 
   <footer>
     <p><small>Site criado unicamente pelo Pedro Ryan Batista de Andrade</small></p>
