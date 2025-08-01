@@ -3,127 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idiotas Oficiais - Home</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 40px;
-      margin: 0;
-      animation: fadeIn 0.5s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    h1 {
-      color: #00ffcc;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    nav {
-      background-color: #1e1e1e;
-      padding: 15px;
-      border-bottom: 2px solid #00ffcc;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      color: #00ffcc;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ff00ff;
-    }
-
-    .link-box {
-      background-color: #1e1e1e;
-      border: 1px solid #00ffcc;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 15px auto;
-      width: 90%;
-      max-width: 500px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .link-box:hover {
-      transform: scale(1.05);
-      background-color: #2a2a2a;
-      box-shadow: 0 0 10px #00ffcc;
-    }
-
-    a {
-      color: #00ffcc;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    small {
-      color: #aaa;
-    }
-
-    .zoeira-box {
-      background-color: #1e1e1e;
-      border: 1px dashed #ff00ff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 30px auto;
-      width: 90%;
-      max-width: 600px;
-      animation: slideIn 0.5s ease-in;
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .zoeira-box img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #aaa;
-    }
-  </style>
+  <title>Arcade dos Idiotas Oficiais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="games.html">Jogos</a>
-    <a href="about.html">Sobre</a>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Barra de Navegação -->
+  <nav class="bg-blue-600 p-4 sticky top-0 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Arcade dos Idiotas Oficiais 😎</h1>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="jogos.html" class="hover:text-yellow-300">Jogos</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Sobre</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <h1>Arcade dos Idiotas Oficiais</h1>
-  <p>Sites que funcionam na escola 😎 radicais</p>
+  <!-- Seção Principal -->
+  <section class="container mx-auto py-10 text-center">
+    <h2 class="text-4xl font-extrabold mb-4">Sites que funcionam na escola! 🚀</h2>
+    <p class="text-lg mb-6">Radicais, zoeiros e perfeitos pra descontrair depois da aula!</p>
+  </section>
 
-  <div class="zoeira-box">
-    <h2>🖼️ Imagem Zoeira do Dia</h2>
-    <p>Pra descontrair depois de ter uma aula radical 😎</p>
-    <img src="https://picsum.photos/500?random=1" alt="Imagem zoeira aleatória">
-  </div>
+  <!-- Imagem Zoeira do Dia -->
+  <section class="container mx-auto py-10">
+    <h3 class="text-3xl font-bold text-center mb-6">🖼️ Imagem Zoeira do Dia</h3>
+    <p class="text-center mb-4">Use com sabedoria, jovem padawan 🧠✨</p>
+    <div class="flex justify-center">
+      <img id="zoeiraImage" src="https://via.placeholder.com/400" alt="Imagem Zoeira" class="rounded-lg shadow-lg max-w-full h-auto">
+    </div>
+    <div class="text-center mt-4">
+      <button onclick="changeImage()" class="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400">Nova Zoeira!</button>
+    </div>
+  </section>
 
-  <p><small>Use com sabedoria e não durante a aula, jovem padawan 🧠✨</small></p>
-
-  <footer>
-    <p><small>Site criado unicamente pelo Pedro Ryan Batista de Andrade</small></p>
+  <!-- Rodapé -->
+  <footer class="bg-blue-600 p-4 text-center">
+    <p>&copy; 2025 Arcade dos Idiotas Oficiais. Feito com zoeira e 😎</p>
   </footer>
+
+  <script>
+    const images = [
+      'https://via.placeholder.com/400/FF0000/FFFFFF?text=Zoeira+1',
+      'https://via.placeholder.com/400/00FF00/FFFFFF?text=Zoeira+2',
+      'https://via.placeholder.com/400/0000FF/FFFFFF?text=Zoeira+3'
+    ];
+
+    function changeImage() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      document.getElementById('zoeiraImage').src = images[randomIndex];
+    }
+
+    window.onload = changeImage;
+  </script>
 </body>
 </html>
